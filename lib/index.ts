@@ -21,9 +21,9 @@ const findSundayOfWeek = (month: number, year: number): Date => {
 };
 
 /**
- * Generates a 35-day calendar grid (5 weeks × 7 days) for any month.
+ * Generates a 42-day calendar grid (6 weeks × 7 days) for any month.
  * The grid always starts from the Sunday of the week containing the 1st
- * of the target month, ensuring a complete 5-week view that calendar
+ * of the target month, ensuring a complete 6-week view that calendar
  * applications typically display.
  */
 
@@ -32,11 +32,11 @@ export default (targetMonth?: number, targetYear?: number): CalendarDay[] => {
   const month = targetMonth ?? now.getMonth() + 1; // getMonth() returns 0-11, we want 1-12
   const year = targetYear ?? now.getFullYear();
 
-  // Generate 35 consecutive days
+  // Generate 42 consecutive days
   const calendar: CalendarDay[] = [];
   const currentDate = new Date(findSundayOfWeek(month, year));
 
-  for (let i = 0; i < 35; i++) {
+  for (let i = 0; i < 42; i++) {
     calendar.push({
       day: currentDate.getDate(),
       month: currentDate.getMonth() + 1, // Convert back to 1-12

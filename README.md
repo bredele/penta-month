@@ -1,22 +1,22 @@
-# penta-month
+# hexa-month
 
-Generate 35-day calendar grids (5 weeks) for any month.
+Generate 42-day calendar grids (6 weeks) for any month.
 
 ## Installation
 
 ```sh
-npm install penta-month
+npm install hexa-month
 ```
 
 ## Usage
 
 ```ts
-import month from 'penta-month';
+import month from 'hexa-month';
 
-// 35 days month for September 2025 (starts Sunday 31st, August and ends October 4th)
+// 42 days month for September 2025 (starts Sunday 31st, August and ends October 11th)
 month(9, 2025);
-// => [{ day: 31, month: 8, year: 2025 }, { day: 1, month: 9, year: 2025 }, ..., { day: 4, month: 10, year: 2025 }]
+// => [{ day: 31, month: 8, year: 2025 }, { day: 1, month: 9, year: 2025 }, ..., { day: 11, month: 10, year: 2025 }]
 
-// 35 days month for current month
+// 42 days month for current month
 month();
 ```
